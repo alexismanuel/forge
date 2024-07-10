@@ -3,14 +3,14 @@
 echo "Running pre-commit hook ..."
 
 # Launch lint
-lint_output=$(./scripts/lint.sh)
+lint_output=$(poe lint -v)
 lint_exit_code=$?
 
 if [ $lint_exit_code -eq 0 ]
 then
   echo "Lint - SUCCESS"
 else
-  echo "Lint - FAIL: Check pylint output to see what's wrong below:"
+  echo "Lint - FAIL: Check ruff output to see what's wrong below:"
   echo "$lint_output"
   exit $lint_exit_code
 fi
@@ -29,14 +29,14 @@ else
 fi
 
 # Launch format check
-format_outpout=$(./scripts/format.sh)
+format_outpout=$(poe format-check -v)
 format_exit_code=$?
 
 if [ $format_exit_code -eq 0 ]
 then
   echo "Format - SUCCESS"
 else
-  echo "Format - FAIL: Check yapf output to see what's wrong:"
+  echo "Format - FAIL: Check ruff output to see what's wrong:"
   echo "$format_outpout"
   exit $format_exit_code
 fi
