@@ -26,7 +26,7 @@ test = "pytest --cov=app --cov-report term-missing tests"
 run = "python -m app"
 lint-check = "ruff check app"
 format-check = "ruff format --check app"
-type-check = "basedpyright nimbus"
+type-check = "basedpyright app"
 format = "ruff format app"
 sort = "isort app"
 
