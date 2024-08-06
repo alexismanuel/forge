@@ -39,4 +39,4 @@ else
   echo "Format - FAIL: Check ruff output to see what's wrong:"
   echo "$format_outpout"
   exit $format_exit_code
-f
+
