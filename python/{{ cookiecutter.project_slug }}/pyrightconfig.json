@@ -10,4 +10,5 @@
     "typeCheckingMode": "standard",
 	"useLibraryCodeForTypes": true,
 	"autoImportCompletions": true,
+	"reportAttributeAccessIssue": false
 }
